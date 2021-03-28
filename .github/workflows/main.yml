@@ -33,8 +33,7 @@ jobs:
          cmd: install #npm install/yarn install
       
       - name: Build React App
-        run: |
-        npm install # Install Dependencies
+        run: npm install # Install Dependencies
         CI=false npm run build # CI=false to ignore warnings
 
       
