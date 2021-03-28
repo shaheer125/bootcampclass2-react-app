@@ -27,7 +27,7 @@ jobs:
       # Install npm packages
       - name: Install packages
         run: npm install
-        
+
       - name: creating build
         run: npm build
       
@@ -35,4 +35,4 @@ jobs:
         run: npm install -g surge
       
       - name: deploying on surge
-        run: surge ./build http://again-practice.surge.sh/ --token ${{secrets.SURGE_TOKEN}}   
+        run: surge ./build /home/fma/Desktop/nodejsfolder/bootcampclass2-react-app/build http://again-practice.surge.sh/ --token ${{secrets.SURGE_TOKEN}}   
