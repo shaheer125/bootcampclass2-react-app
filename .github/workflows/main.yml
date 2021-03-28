@@ -32,8 +32,11 @@ jobs:
           # Yarn command
          cmd: install #npm install/yarn install
       
-      - name: creating build
-        run: npm run build
+      - name: Build React App
+        run: |
+        npm install # Install Dependencies
+        CI=false npm run build # CI=false to ignore warnings
+
       
       - name: intalling surge
         run: npm install -g surge
